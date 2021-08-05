@@ -32,7 +32,7 @@ a{
 	color: #333;
 }
 a:hover {
-	color: #85d9e3;
+	color: var(--main-hover-color);
 }
 .thumb{
 	display: block;
@@ -59,9 +59,9 @@ br.clear {
 	max-width:1200px;
 }
 :root {
-  --main-bg-color: #273445;
+  --main-bg-color: #0f1923;
   --main-heading-color: #fff;
-  --main-border-color: #85d9e3;
+  --main-hover-color: #85d9e3;
 }
 #home {
 	margin: 0 auto;
@@ -106,7 +106,7 @@ header nav ul li a {
 	color: var(--main-heading-color);
 }
 header nav ul li a:hover {
-	color: var(--main-border-color);
+	color: var(--main-hover-color);
 }
 header nav ul li a.button {
 	padding: 12px 24px;
@@ -127,12 +127,7 @@ header nav ul li a.button:hover {
 	text-align: center;
 }
 #spotlight div.top {
-	padding-top: 200px;
-}
-#spotlight div.top span {
-	font-style: 20px;
-	font-weight: 400;
-	color: var(--main-heading-color);
+	padding-top: 120px;
 }
 #spotlight div.top h1 a {
 	font-size: 80px;
@@ -140,7 +135,7 @@ header nav ul li a.button:hover {
 	color: var(--main-heading-color);
 }
 #spotlight div.top a:hover {
-	color: #fff;
+	color: var(--main-hover-color);
 }
 #spotlight div.social {
 	max-width: 100%;
@@ -148,7 +143,7 @@ header nav ul li a.button:hover {
 	text-align: center;
 }
 #spotlight div.social ul {
-	max-width: 25%;
+	width: 25%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -169,45 +164,85 @@ header nav ul li a.button:hover {
 }
 #about {
 	margin: 0 auto;
-	width: 90%;
-	padding: 100px 0;
-	background: var(--main-heading-color);
+	width: 70%;
+	padding: 80px 0;
+	background: var(--main-bg-color);
 	position: relative;
 	z-index: 1;
 }
 #about section.wrapper {
-	display: flex;
-	align-items: center;
 }
 #about div.content {
-	width: 50%;
 	padding: 32px;
+	text-align: center;
+}
+#about div.content h1.image {
+	margin: 0 auto;
+	width: 100px;
+	margin-bottom: 24px;
+}
+#about div.content h1.image a {
+	width: 100%;
+}
+#about div.content h1.image a img {
+	width: 100%;
 }
 #about div.content h1 {
 	font-size: 50px;
 	font-weight: 700;
-	color: var(--main-bg-color);
+	color: var(--main-heading-color);
 	margin-bottom: 24px;
 }
 #about div.content p {
 	font-style: 20px;
 	font-weight: 400;
 	color: #000;
+	color: var(--main-heading-color);
+	margin-bottom: 80px;
 }
-#about div.image {
-	width: 30%;
-	margin-left: 160px;
+#about div.content a.button {
+	padding: 10px 24px;
+	border: 1px solid #fff;
+	color: var(--main-heading-color);
 }
-#about div.image a {
-	display: block;
+#about div.content a.button:hover {
+	color: var(--main-hover-color);
+}
+#Professions {
+	text-align: center;
+	margin: 0 auto;
+	width: 70%;
+	padding: 100px 0;
+	position: relative;
+	z-index: 1;
+}
+#Professions section.content {
+	width: 90%;
+	margin: 0 auto;
+}
+#Professions section.content h1 {
+	font-size: 50px;
+	font-weight: 700;
+	color: var(--main-heading-color);
+	margin-bottom: 24px;
+}
+#Professions section.content ul {
+	margin: 0 auto;
+	padding-top: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#Professions section.content ul li {
+	width: 160px;
+}
+#Professions section.content ul li img {
 	width: 100%;
 }
-#about div.image a img {
-	width: 360px;
-    display: inline-block;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
 #skills {
+	width: 70%;
+	margin: 0 auto;
 	padding: 80px 0;
 	position: relative;
 	z-index: 1;
@@ -222,60 +257,53 @@ header nav ul li a.button:hover {
 	font-size: 50px;
 	font-weight: 700;
 	color: var(--main-heading-color);
+	margin-bottom: 16px;
+}
+#skills div.top span {
+	color: #d5d5d5;
 }
 #skills div.content {
-
+	width: 90%;
 }
-#skills div.content ul {
+#skills div.content div.container {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	color: #d5d5d5;
+	margin-bottom: 24px;
 	flex-wrap: wrap;
 }
-#skills div.content ul li {
-	width: 49%;
-	display: flex;
-	align-items: center;
-	background: rgba(255, 255, 255, 0.8);
-	padding: 18px;
-	margin-bottom: 24px;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+#skills div.content div.container span {
+	margin-right: 24px;
+	text-align: right;
+	width: 108.33px;
 }
-#skills div.content ul li:nth-child(odd) {
+#skills div.content div.container div.percentage {
+	height: 10px;
+	background: #2ab840;
 	margin-right: 24px;
 }
-#skills div.content ul li div.left {
-	max-width: 100px;
+#skills div.content div.container div.percentage.HTML {
+	width: 70%;
 }
-#skills div.content ul li div.left img {
-	width: 100%;
+#skills div.content div.container div.percentage.CSS {
+	width: 65%;
 }
-#skills div.content ul li div.right {
-	margin-left: 18px;
-	text-align: left;
+#skills div.content div.container div.percentage.GITLAB {
+	width: 55%;
 }
-#skills div.content ul li div.right h6 {
-	font-size: 18px;
-	font-weight: 700;
-	color: var(--main-bg-color);
-	margin-bottom: 10px;
+#skills div.content div.container div.percentage.GITHUB {
+	width: 60%;
 }
-#skills div.content ul li div.right p {
-	font-size: 14px;
-	font-weight: 400;
-	margin-bottom: 10px;
+#skills div.content div.container div.percentage.PS {
+	width: 70%;
 }
-#skills div.content ul li div.right p b {
-	font-weight: bold;
-}
-#skills div.content ul li div.right a.button {
-	font-size: 14px;
-	font-weight: 400;
-	color: #0052cc;
+#skills div.content div.container p {
+
 }
 #projects {
-	background: rgba(39, 52, 69, 0.8);
-	padding: 80px 0 200px;
+	width: 70%;
+	margin: 0 auto;
+	padding: 80px 0 100px;
 	position: relative;
 	z-index: 1;
 }
@@ -294,27 +322,9 @@ header nav ul li a.button:hover {
 #projects div.content {
 	padding-top: 80px;
 }
-#projects div.content ul {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-#projects div.content ul li {
-	width: 20%;
-}
-#projects div.content ul li:nth-child(even) {
-	margin-top: 80px;
-}
-#projects div.content ul li span {
-	padding: 50px 35px;
-	font-size: 12px;
-	font-weight: 400;
-	border-radius: 50%;
-	background: var(--main-heading-color);
-	color: var(--main-bg-color);
-}
-#projects div.content ul li span:hover {
-	background: #fff;
+#projects div.content h2 {
+	margin: 40px auto;
+	color: red;
 }
 #learn {
 	background: #fff;
@@ -393,7 +403,7 @@ header nav ul li a.button:hover {
 	width: 80%;
 }
 footer {
-	background: rgba(39, 52, 69, 0.9);
+	background: rgba(15, 25, 35, 0.8);
 	padding-top: 80px;
 	position: relative;
 	z-index: 1;
@@ -405,30 +415,30 @@ footer section.wrapper {
 footer section.top {
 	width: 80%;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 footer section.top div.left {
 	width: 300px;
+	margin-right: 120px;
 }
 footer section.top div.left img {
 	width: 100%;
 }
-footer section.top div.left div#social {
+footer section.top div.left div#connect {
 	padding-top: 28px;
 }
-footer section.top div.left div#social ul {
+footer section.top div.left div#connect ul {
 	margin-left: 24px;
 	display: flex;
 	align-items: center;
 }
-footer section.top div.left div#social ul li {
+footer section.top div.left div#connect ul li {
 	margin-right: 16px;
 }
-footer section.top div.left div#social ul li a {
+footer section.top div.left div#connect ul li a {
 
 }
-footer section.top div.left div#social ul li a img {
+footer section.top div.left div#connect ul li a img {
 	padding: 8px;
     background: #fff;
     border: 1px solid #fff;
@@ -436,16 +446,11 @@ footer section.top div.left div#social ul li a img {
     filter: grayscale(100%);
     opacity: 0.4;
 }
-footer section.top div.left div#social ul li a img:hover {
+footer section.top div.left div#connect ul li a img:hover {
 	opacity: 80%;
 }
 footer section.top nav {
-}
-footer section.top nav.middle {
-
-}
-footer section.top nav.right {
-	margin-top: 50px;
+	margin-right: 120px;
 }
 footer section.top nav span {
 	color: #fff;
@@ -464,11 +469,28 @@ footer section.top nav ul li a {
 	color: #d5d5d5;
 }
 footer section.top nav ul li a:hover {
-	color: #85d9e3;
+	color: var(--main-hover-color);
+}
+footer section.top div.contact {
+	color: var(--main-heading-color);
+}
+footer section.top div.contact p {
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 12px;
+}
+footer section.top div.contact p.one {
+}
+footer section.top div.contact p a {
+	color: #fff;
+}
+footer section.top div.contact p a img {
+	width: 20px;
+	margin-right: 10px;
 }
 footer section.bottom {
 	margin-top: 40px;
-	background: #152228;
+	background: #0a1016;
 	max-width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -505,41 +527,135 @@ footer section.bottom div p a:hover {
 }
 
 @media all and (max-width: 1280px) {
-	#about div.image {
-		margin-left: 80px;
+	#spotlight div.social ul {
+		width: 40%;
 	}
-	#skills div.content ul {
+	#Professions section.content ul li {
+		width: 240px;
+		margin-right: 24px;
+		margin-bottom: 24px;
+	}
+	#learn div.left a.button {
+		max-width: 80%;
+	}
+}
+@media all and (max-width: 980px) {
+	header nav {
+		display: none;
+	}
+	header h1.left {
+		margin: 0 auto;
+		padding-top: 40px;
+	}
+	#about {
+		width: 95%;
+	}
+	#Professions {
+		width: 95%;
+	}
+	#skills {
+		width: 95%;
+	}
+	#Professions section.content ul {
+		width: 300px;
+	}
+	#skills div.content div.container span {
+		margin-right: 100%;
+	}
+	#learn div.left {
+		width: 90%;
+	}
+	#learn div.right {
+		display: none;
+	}
+	footer section.top {
+		display: block;
+		margin: 0 auto;
 		text-align: center;
 	}
-	#skills div.content ul li {
+	footer section.top div.left {
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	footer section.top nav {
+		display: none;
+	}
+	footer section.top div.contact {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		width: 100%;
 	}
-	#skills div.content ul li:nth-child(odd) {
-		margin-right: 0;
+}
+@media all and (max-width: 786px) {
+	#home {
+		background: var(--main-bg-color);
+	}
+	#spotlight div.top h1 a {
+		font-size: 72px;
+	}
+	#spotlight div.social ul {
+		width: 60%;
+	}
+	footer section.wrapper {
+		margin: 0 auto;
+	}
+	footer section.bottom {
+		padding: 10px 40px;
+	}
+}
+@media all and (max-width: 640px) {
+	#spotlight div.top h1 a {
+		font-size: 64px;
+	}
+	#about div.content h1 {
+		font-size: 36px;
+	}
+	#Professions section.content h1 {
+		font-size: 36px;
+	}
+	#skills div.top h1 {
+		font-size: 36px;
+	}
+	#projects div.head h1 {
+		font-size: 36px;
+	}
+	footer section.top div.contact {
+		display: block;
+	}
+	footer section.bottom {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		padding: 24px 0;
+	}
+}
+@media all and (max-width: 480px) {
+	#spotlight div.top h1 a {
+		font-size: 50px;
+	}
+	#spotlight div.social ul {
+		width: 90%;
+	}
+	#learn div.left {
+		width: 100%;
 	}
 	#learn div.left a.button {
 		max-width: 100%;
 	}
-}
-@media all and (max-width: 980px) {
-	#about section.wrapper {
-		text-align: center;
+	footer section.top {
 		margin: 0 auto;
-		display: block;
 	}
-	#about div.content {
+	footer section.top div.left {
+		margin: 0;
+		margin-bottom: 40px;
+		width: 200px;
+	}
+	footer section.top div.left div#connect {
 		width: 100%;
 	}
-	#about div.image {
-		width: 100%;
-		margin-left: 0;
-	}
-	#projects div.content ul {
-	}
-	#projects div.content ul li {
-		width: 30%;
-	}
-	#projects div.content ul li:nth-child(even) {
-		margin-top: 0;
+	footer section.top div.left div#connect ul {
+		flex-wrap: wrap;
+		margin: 0 auto;
 	}
 }
